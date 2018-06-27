@@ -1,0 +1,16 @@
+ I use launchd to run the backupumounter script with a plist file like this:
+ 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>backupumounter</string>
+        <key>ProgramArguments</key>
+        <array>
+          <string>/usr/bin/nohup /tmp/backupumounter.sh &</string>
+        </array>
+        <key>StartInterval</key>
+        <integer>1800</integer>
+    </dict>
+</plist>
